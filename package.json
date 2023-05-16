@@ -1,6 +1,6 @@
 {
   "name": "cpbf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cosmos Protobuffer Reader and Writer",
   "author": "Dan Lynch <pyramation@gmail.com>",
   "homepage": "https://github.com/cosmology_tech/cpbf#readme",
