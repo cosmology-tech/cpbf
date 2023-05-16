@@ -8,9 +8,6 @@
   <a href="https://github.com/cosmology-tech/cpbf/actions/workflows/run-tests.yml">
     <img height="20" src="https://github.com/cosmology-tech/cpbf/actions/workflows/run-tests.yml/badge.svg" />
   </a>
-  <a href="https://www.npmjs.com/package/cpbf">
-    <img height="20" src="https://img.shields.io/npm/dt/cpbf" />
-  </a>
    <a href="https://github.com/cosmology-tech/cpbf/blob/main/LICENSE"><img height="20" src="https://img.shields.io/badge/license-BSD%203--Clause%20Clear-blue.svg"></a>
    <a href="https://www.npmjs.com/package/cpbf"><img height="20" src="https://img.shields.io/github/package-json/v/cosmology-tech/cpbf?filename=package.json"></a>
 </p>
