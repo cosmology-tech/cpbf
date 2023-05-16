@@ -1,4 +1,4 @@
-import { BinaryReader, BinaryWriter, WireType } from "../binary";
+import { BinaryReader, BinaryWriter, WireType } from "../src/binary";
 
 import * as _m0 from "protobufjs/minimal";
 
@@ -47,9 +47,8 @@ function getUseCase(
   isTestingWrite = false
 ) {
   return {
-    name: `${method} = ${value.toString().substring(0, 100)}${
-      desc.trim() === "" ? "" : ` (${desc})`
-    }`,
+    name: `${method} = ${value.toString().substring(0, 100)}${desc.trim() === "" ? "" : ` (${desc})`
+      }`,
     readerCreater: (buf) =>
       isTestingWrite ? new _m0.Reader(buf) : new BinaryReader(buf),
     writer: isTestingWrite ? BinaryWriter.create() : _m0.Writer.create(),
