@@ -47,8 +47,9 @@ function getUseCase(
   isTestingWrite = false
 ) {
   return {
-    name: `${method} = ${value.toString().substring(0, 100)}${desc.trim() === "" ? "" : ` (${desc})`
-      }`,
+    name: `${method} = ${value.toString().substring(0, 100)}${
+      desc.trim() === "" ? "" : ` (${desc})`
+    }`,
     readerCreater: (buf) =>
       isTestingWrite ? new _m0.Reader(buf) : new BinaryReader(buf),
     writer: isTestingWrite ? BinaryWriter.create() : _m0.Writer.create(),
@@ -401,7 +402,11 @@ describe("writer", () => {
     const reader = new BinaryReader(buf);
     const end = reader.len;
 
-    const results = {
+    const results: {
+      f1: number[];
+      f2: bigint[];
+      f3: string[];
+    } = {
       f1: [],
       f2: [],
       f3: [],
@@ -659,7 +664,7 @@ export const MessageWithEntry = {
     const message = createBaseMessageWithEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
-      let entry2: MapEntry = null;
+      let entry2: MapEntry | null = null;
       switch (tag >>> 3) {
         case 1:
           entry2 = MapEntry.decode(reader, reader.uint32());
